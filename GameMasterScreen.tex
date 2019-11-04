@@ -1,0 +1,155 @@
+\documentclass[oneside]{book}
+% Using the custom LaTeX Package from:
+% @see https://github.com/c-bec-k/GenesysRPG
+
+% Packages
+\usepackage[background]{genesys}
+\geometry{landscape, paperheight=13in}
+\usepackage[bookmarks]{hyperref}
+\usepackage[open]{bookmark}
+
+% Preamble/Author
+\title{Genesys GM Screen}
+\author{Phillip Dudley \thanks{Christopher Ruthenbeck for the \LaTeX package}}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+\begin{table}[H]
+  \caption{Skills}
+\begin{GenesysTable}{l l X}
+Skill & Page & Link Char \\
+Astrogation & EotE p104 & Intelligence \\
+Athletics & EotE p105 & Brawn \\
+Brawl & EotE p120 & Brawn \\
+Charm & EotE p105 & Presence \\
+Coercion & EotE p106 & Willpower \\
+Computers & EotE p107 & Intelligence \\
+Cool & EotE p108 & Presence \\
+Coordination & EotE p109 & Agility \\
+Core Worlds & EotE p123 & Intelligence \\
+Deception & EotE p109 & Cunning \\
+Discipline & EotE p110 & Willpower \\
+Education & EotE p123 & Intelligence \\
+Gunnery & EotE p120 & Agility \\
+Leadership & EotE p111 & Presence \\
+Lightsaber & FaD p130 & Brawn \\
+Lore & EotE p123 & Intelligence \\
+Mechanics & EotE p111 & Intelligence \\
+Medicine & EotE p112 & Intelligence \\
+Melee & EotE p121 & Brawn \\
+Negotiation & EotE p113 & Presence \\
+Outer Rim & EotE p124 & Intelligence \\
+Perception & EotE p114 & Cunning \\
+Piloting - Planetary & EotE p115 & Agility \\
+Piloting - Space & EotE p116 & Agility \\
+Ranged - Light & EotE p121 & Agility \\
+Ranged - Heavy & EotE p122 & Agility \\
+Resilence & EotE p116 & Brawn \\
+Skulduggery & EotE p116 & Cunning \\
+Stealth & EotE p117 & Agility \\
+Streetwise & EotE p118 & Cunning \\
+Survival & EotE p119 & Cunning \\
+Underworld & EotE p124 & Intelligence \\
+Vigilance & EotE p119 & Willpower \\
+Warfare & AoR p136 & Intelligence \\
+Xenology & EotE p125 & Intelligence \\
+\end{GenesysTable}
+\end{table}
+
+\columnbreak
+
+\begin{table}[H]
+  \caption{Character Criticals}
+  \begin{GenesysTable}{l l X}
+    d100 & Severity & Result \\
+    01-05 & \DifficultyDie & Minor Nick \textit{{\footnotesize Suffor 1 strain}} \\
+    06-10 & \DifficultyDie & Slowed \textit{{\footnotesize Can only act during last allied initiative slot on next turn}} \\
+    11-15 & \DifficultyDie & Sudden Jolt \textit{{\footnotesize Drop item in hand}} \\
+    16-20 & \DifficultyDie & Distracted \textit{{\footnotesize Cannot perform free maneuver next turn}} \\
+    21-25 & \DifficultyDie & Off-Balance \textit{{\footnotesize +\SetbackDie to next skill check}} \\
+    26-30 & \DifficultyDie & Discouraging Wound \textit{{\footnotesize Flip Story Point from their pool to other}} \\
+    31-35 & \DifficultyDie & Stunned \textit{{\footnotesize Staggered until end of next turn}} \\
+    36-40 & \DifficultyDie & Stinger \textit{{\footnotesize +\DifficultyDie to next check}} \\
+    41-45 & \DifficultyDie\DifficultyDie & Bowled Over \textit{{\footnotesize Knocked prone. +1 strain}} \\
+    46-50 & \DifficultyDie\DifficultyDie & Head Ringer \textit{{\footnotesize +\DifficultyDie to Int/Cun checks until end of Encounter}} \\
+    51-55 & \DifficultyDie\DifficultyDie & Fearsome Wound \textit{{\footnotesize +\DifficultyDie to Pre/Will checks until end of Encounter}} \\
+    56-60 & \DifficultyDie\DifficultyDie & Agonizing Wound \textit{{\footnotesize +\DifficultyDie to Br/Ag checks until end of Encounter}} \\
+    61-65 & \DifficultyDie\DifficultyDie & Slightly Dazed \textit{{\footnotesize Disoriented until end of Encounter}} \\
+    66-70 & \DifficultyDie\DifficultyDie & Scattered Senses \textit{{\footnotesize Remove all \BoostDie from skill checks until end of encounter}} \\
+    71-75 & \DifficultyDie\DifficultyDie & Hamstrung \textit{{\footnotesize The target loses their free maneuver until end of encounter}} \\
+    76-80 & \DifficultyDie\DifficultyDie & Overpowered \textit{{\footnotesize The target leaves themselves open and attacker may immediately attempt another free attack against them using the previous dice pool}} \\
+    81-85 & \DifficultyDie\DifficultyDie & Winded \textit{{\footnotesize Until the end of encounter, the target cannot voluntarily suffer strain to activate any abilities or gain additional maneuvers}} \\
+    86-90 & \DifficultyDie\DifficultyDie & Compromised \textit{{\footnotesize +\DifficultyDie until end of Encounter}} \\
+    91-95 & \DifficultyDie\DifficultyDie\DifficultyDie & At the Brink \textit{{\footnotesize 1 strain per action}} \\
+    96-100 & \DifficultyDie\DifficultyDie\DifficultyDie & Crippled \textit{{\footnotesize One of the target's limbs, selected by GM, is crippled until healed or replaced. Increase difficulty of all checks that require that limb by one}} \\
+    101-105 & \DifficultyDie\DifficultyDie\DifficultyDie & Maimed \textit{{\footnotesize A limb is permanently lost. Unless the target has a cybernetic replacement, the target cannot perform actions that would require the limb. All other actions get \SetbackDie}} \\
+    106-110 & \DifficultyDie\DifficultyDie\DifficultyDie & Horrific Injury \textit{{\footnotesize Randomly roll 1d10, 1-3 Br, 4-6 Ag, 7 Int, 8 Cun, 9 Pr, 10 Wil. The target loses 1 in that stat until treated}} \\
+    111-115 & \DifficultyDie\DifficultyDie\DifficultyDie & Temporarily Lame \textit{{\footnotesize Until this Crit Injury is healed, the target cannot perform more than one manuever their turn}} \\
+    116-120 & \DifficultyDie\DifficultyDie\DifficultyDie & Blinded \textit{{\footnotesize Target can no longer see. Upgrade difficulty of all checks twice. Upgrade difficulty of Perception and Vigilance checks three times}} \\
+    121-125 & \DifficultyDie\DifficultyDie\DifficultyDie & Knocked Senseless \textit{{\footnotesize The target is staggered for the remained of the encounter}} \\
+  126-130 & \DifficultyDie\DifficultyDie\DifficultyDie\DifficultyDie & Gruesome Injury \textit{{\footnotesize Roll 1d10. 1-3 Br, 4-6 Ag, 7 Int, 8 Cun, 9 Pr, 10 Wil. That stat is permanently lowered by 1}} \\
+    131-140 & \DifficultyDie\DifficultyDie\DifficultyDie\DifficultyDie & Bleeding Out \textit{{\footnotesize Every round the target suffers 1 wound and 1 strain at the beginning of their turn. Every 5 wounds beyond threshold causes another Crit Injury. If this result is rolled, keep rolling}} \\
+    141-150 & \DifficultyDie\DifficultyDie\DifficultyDie\DifficultyDie & The End is Nigh \textit{{\footnotesize Target will die after last initiative slot during the next round}} \\
+    151+ &  & \textbf{Dead} \textit{{\footnotesize Complete, Obliterated death}} \\
+  \end{GenesysTable}
+\end{table}
+
+\end{multicols}
+
+\newpage
+
+\begin{multicols}{3}
+
+\section{Skill Checks}
+
+Compare Characteristic and Skill Rank. Use higher number for \AbilityDie and lower number to upgrade to \ProficiencyDie.
+
+\section{Assisted Checks}
+
+If character assisting has the skill and is higher, use their highest base dice and upgrade with other character's highest base dice.
+
+\section{Opposed Checks}
+
+Set difficulty to opposing character's skill dice pool for Active character's roll.
+
+\columnbreak
+
+\section{Maneuvers}
+
+\begin{table}[H]
+  \begin{GenesysTable}{l X}
+    Maneuvers & Explanation \\
+    \textbf{Aim} & \textit{Gain a bonus, \BoostDie, on the next attack} \\
+    \textbf{Assist} & \textit{Grant a bonus, \BoostDie, to next ally's check} \\
+    \textbf{Guarded Stance} & \textit{Take penalties to melee attacks for bonus, \SetbackDie, to melee defense} \\
+    \textbf{Interact with Environment} & \textit{This could be anything like moving objects or manipulating controls} \\
+    \textbf{Manage Gear} & \textit{Draw, holster, or put away weapons and items or load a weapon} \\
+    \textbf{Mount or Dismount} & \textit{Mount or dismount from vehicle or animal} \\
+    \textbf{Move} & \textit{Move within range bands or change ranges with something else} \\
+    \textbf{Drop Prone or Stand from Prone} & \textit{Drop to the prone position or stand from} \\
+    \textbf{Preparation} & \textit{Take a maneuver to prepare something for something else} \\
+  \end{GenesysTable}
+\end{table}
+
+\section{Actions}
+
+\begin{table}[H]
+  \begin{GenesysTable}{l X}
+    Actions & Explanation \\
+    \textbf{Exchange an Action for a Maneuver} & \textit{Take a maneuver instead of an action} \\
+    \textbf{Spend an action to activate an ability} & \textit{Some abilities require spending actions without checks} \\
+    \textbf{Acivating a force power} & \textit{Use a force power} \\
+    \textbf{Performing skill check} & \textit{Anything that requires a skill check requires an action to perform unless specificially stated otherwise} \\
+    \textbf{Performing a combat check} & \textit{Perform a skill check with additional rules to attack someone} \\
+  \end{GenesysTable}
+\end{table}
+
+\columnbreak
+
+\section{Difficulty Levels}
+
+\end{multicols}
+
+\end{document}
